@@ -1,11 +1,7 @@
 # Community-discovered ad and tracking servers.
-#
-# Domains in this file were found by the extension's heuristic detector rather
-# than taken from an upstream list. The aggregation workflow folds them into
-# the compiled blocklist.
-#
-# A domain reaches this file only after it has been seen on several unrelated
-# sites and matched the ad-server signals. Review entries before merging; a
-# false positive here breaks real pages.
-#
-# One domain per line. Comments start with #.
+# adblockker self-test (will be removed)
+# Entries here are merged into the compiled blocklist by the aggregation workflow.
+# Entries: 1
+# Updated: 2026-11-04T10:02:17.382Z
+
+selftest-1793786536475.adblockker-grow-test.invalid
