@@ -1,0 +1,59 @@
+! adblockker generic ad-path rules
+!
+! These block by URL *path*, on ANY domain, so an ad served from a brand-new
+! host that no blocklist has yet is still caught the moment it uses a standard
+! ad-tech endpoint. They are compiled into their own declarativeNetRequest
+! ruleset (rules/generic.json).
+!
+! Every entry here is deliberately specific. Generic fragments like "/ad/" or
+! "/ads/" are intentionally omitted: they match legitimate paths too often.
+! Only high-confidence ad-tech path markers belong in this file.
+
+! --- Google ad serving
+/pagead/
+/pagead2/
+/gampad/
+/pubads
+/securepubads
+/adsbygoogle
+/getconfig/pubads
+/activeview?
+
+! --- Real-time bidding / header bidding
+/openrtb2/
+/openrtb/
+/prebid/
+/header-bidding/
+/hb_bid
+/cygnus?
+/prebidserver/
+
+! --- Impression / click / conversion tracking
+/adserver/
+/adserve/
+/adframe/
+/adcall/
+/adrequest?
+/impression?
+/impressions?
+/ad_impression
+/click_tracking/
+/conversion?
+/pixel?adid
+/pagead/1p-user-list
+
+! --- Identity / cookie syncing
+/usersync?
+/cookiesync?
+/idsync?
+/getuid?
+/setuid?
+/match?bidder
+/pixel/sync
+
+! --- Video ad serving (VAST/VMAP)
+/vast?
+/vast/v
+/vmap?
+/get_video_ads
+/ad_break?
