@@ -1,0 +1,21 @@
+# adblockker allowlist
+#
+# Domains here are never blocked, and they override every upstream list.
+# This file is the main defence against the aggregated database breaking real
+# sites. One entry covers the domain and all of its subdomains.
+#
+# Add a domain when blocking it breaks something a user actually needs:
+# sign-in, payment, CAPTCHA, or a CDN that serves page-critical scripts.
+#
+# The built-in defaults in packages/core/src/sources.ts already cover the
+# common cases (Google/Microsoft/Apple sign-in, Stripe, PayPal, reCAPTCHA,
+# hCaptcha, major script CDNs). Add project-specific entries below.
+
+# --- Sign-in and identity
+# accounts.google.com          (already in defaults)
+# login.microsoftonline.com    (already in defaults)
+
+# --- Payments
+# js.stripe.com                (already in defaults)
+
+# --- Add your own below this line

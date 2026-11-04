@@ -1,0 +1,333 @@
+{
+  "$schema": "./sources.schema.json",
+  "version": 1,
+  "_comment": "Registry of upstream filter lists. \"trust\" below 0.5 means a domain from this source alone is quarantined until another source confirms it. Set \"enabled\": false to keep a list registered but skip it.",
+  "sync": {
+    "owner": "Ashishindora-a11y",
+    "repo": "adblocker-db",
+    "branch": "main",
+    "communityPath": "database/community/discovered.txt",
+    "blocklistPath": "database/blocklist/domains.txt",
+    "metaPath": "database/blocklist/meta.json",
+    "_comment": "Point owner/repo at the GitHub repository that stores the database. Reading needs no token; pushing needs a fine-grained token with Contents: Read and write on this repository only."
+  },
+  "allowlist": [],
+  "sources": [
+    {
+      "id": "easylist",
+      "name": "EasyList",
+      "url": "https://easylist.to/easylist/easylist.txt",
+      "format": "adblock",
+      "category": "ads",
+      "license": "GPLv3 / CC BY-SA 3.0",
+      "homepage": "https://easylist.to/",
+      "trust": 1
+    },
+    {
+      "id": "easyprivacy",
+      "name": "EasyPrivacy",
+      "url": "https://easylist.to/easylist/easyprivacy.txt",
+      "format": "adblock",
+      "category": "tracking",
+      "license": "GPLv3 / CC BY-SA 3.0",
+      "homepage": "https://easylist.to/",
+      "trust": 1
+    },
+    {
+      "id": "ubo-filters",
+      "name": "uBlock Origin — base filters",
+      "url": "https://ublockorigin.github.io/uAssets/filters/filters.txt",
+      "format": "adblock",
+      "category": "ads",
+      "license": "GPLv3",
+      "homepage": "https://github.com/uBlockOrigin/uAssets",
+      "trust": 1
+    },
+    {
+      "id": "ubo-privacy",
+      "name": "uBlock Origin — privacy",
+      "url": "https://ublockorigin.github.io/uAssets/filters/privacy.txt",
+      "format": "adblock",
+      "category": "tracking",
+      "license": "GPLv3",
+      "homepage": "https://github.com/uBlockOrigin/uAssets",
+      "trust": 1
+    },
+    {
+      "id": "ubo-badware",
+      "name": "uBlock Origin — badware risks",
+      "url": "https://ublockorigin.github.io/uAssets/filters/badware.txt",
+      "format": "adblock",
+      "category": "malware",
+      "license": "GPLv3",
+      "homepage": "https://github.com/uBlockOrigin/uAssets",
+      "trust": 1
+    },
+    {
+      "id": "ubo-resource-abuse",
+      "name": "uBlock Origin — resource abuse",
+      "url": "https://ublockorigin.github.io/uAssets/filters/resource-abuse.txt",
+      "format": "adblock",
+      "category": "other",
+      "license": "GPLv3",
+      "homepage": "https://github.com/uBlockOrigin/uAssets",
+      "trust": 1
+    },
+    {
+      "id": "ubo-quick-fixes",
+      "name": "uBlock Origin — quick fixes",
+      "url": "https://ublockorigin.github.io/uAssets/filters/quick-fixes.txt",
+      "format": "adblock",
+      "category": "ads",
+      "license": "GPLv3",
+      "homepage": "https://github.com/uBlockOrigin/uAssets",
+      "trust": 1
+    },
+    {
+      "id": "yoyo-adservers",
+      "name": "Peter Lowe's Ad and tracking server list",
+      "url": "https://pgl.yoyo.org/adservers/serverlist.php?hostformat=hosts&showintro=0&mimetype=plaintext",
+      "format": "hosts",
+      "category": "ads",
+      "license": "CC BY-NC-SA 4.0 (non-commercial use only)",
+      "homepage": "https://pgl.yoyo.org/adservers/",
+      "trust": 1
+    },
+    {
+      "id": "adguard-dns",
+      "name": "AdGuard DNS filter",
+      "url": "https://adguardteam.github.io/AdGuardSDNSFilter/Filters/filter.txt",
+      "format": "adblock",
+      "category": "ads",
+      "license": "GPLv3",
+      "homepage": "https://github.com/AdguardTeam/AdGuardSDNSFilter",
+      "trust": 0.9
+    },
+    {
+      "id": "adguard-base",
+      "name": "AdGuard Base filter",
+      "url": "https://filters.adtidy.org/extension/ublock/filters/2.txt",
+      "format": "adblock",
+      "category": "ads",
+      "license": "GPLv3",
+      "homepage": "https://adguard.com/kb/general/ad-filtering/adguard-filters/",
+      "trust": 0.9
+    },
+    {
+      "id": "adguard-tracking",
+      "name": "AdGuard Tracking Protection filter",
+      "url": "https://filters.adtidy.org/extension/ublock/filters/3.txt",
+      "format": "adblock",
+      "category": "tracking",
+      "license": "GPLv3",
+      "homepage": "https://adguard.com/kb/general/ad-filtering/adguard-filters/",
+      "trust": 0.9
+    },
+    {
+      "id": "stevenblack",
+      "name": "StevenBlack unified hosts (adware + malware)",
+      "url": "https://raw.githubusercontent.com/StevenBlack/hosts/master/hosts",
+      "format": "hosts",
+      "category": "ads",
+      "license": "MIT",
+      "homepage": "https://github.com/StevenBlack/hosts",
+      "trust": 0.9
+    },
+    {
+      "id": "oisd-big",
+      "name": "oisd blocklist (big)",
+      "url": "https://big.oisd.nl/domainswild",
+      "format": "domains",
+      "category": "ads",
+      "license": "Free for personal use, attribution",
+      "homepage": "https://oisd.nl/",
+      "trust": 0.85
+    },
+    {
+      "id": "anudeep-adservers",
+      "name": "anudeepND ad servers",
+      "url": "https://raw.githubusercontent.com/anudeepND/blacklist/master/adservers.txt",
+      "format": "hosts",
+      "category": "ads",
+      "license": "MIT",
+      "homepage": "https://github.com/anudeepND/blacklist",
+      "trust": 0.8
+    },
+    {
+      "id": "mvps",
+      "name": "MVPS hosts file",
+      "url": "https://winhelp2002.mvps.org/hosts.txt",
+      "format": "hosts",
+      "category": "ads",
+      "license": "CC BY-NC-SA 4.0 (non-commercial use only)",
+      "homepage": "https://winhelp2002.mvps.org/hosts.htm",
+      "trust": 0.8
+    },
+    {
+      "id": "1hosts-lite",
+      "name": "1Hosts (Lite)",
+      "url": "https://raw.githubusercontent.com/badmojr/1Hosts/master/Lite/domains.txt",
+      "format": "domains",
+      "category": "ads",
+      "license": "GPLv3",
+      "homepage": "https://github.com/badmojr/1Hosts",
+      "trust": 0.8
+    },
+    {
+      "id": "adaway",
+      "name": "AdAway default blocklist",
+      "url": "https://adaway.org/hosts.txt",
+      "format": "hosts",
+      "category": "mobile",
+      "license": "CC BY 3.0",
+      "homepage": "https://adaway.org/",
+      "trust": 0.85
+    },
+    {
+      "id": "someonewhocares",
+      "name": "Dan Pollock's hosts file",
+      "url": "https://someonewhocares.org/hosts/zero/hosts",
+      "format": "hosts",
+      "category": "ads",
+      "license": "Non-commercial, attribution",
+      "homepage": "https://someonewhocares.org/hosts/",
+      "trust": 0.8
+    },
+    {
+      "id": "frogeye-firstparty",
+      "name": "Frogeye first-party trackers",
+      "url": "https://hostfiles.frogeye.fr/firstparty-trackers-hosts.txt",
+      "format": "hosts",
+      "category": "tracking",
+      "license": "MIT",
+      "homepage": "https://hostfiles.frogeye.fr/",
+      "trust": 0.8
+    },
+    {
+      "id": "urlhaus-filter",
+      "name": "URLhaus malware filter (malware-filter mirror)",
+      "url": "https://malware-filter.gitlab.io/malware-filter/urlhaus-filter-hosts.txt",
+      "format": "hosts",
+      "category": "malware",
+      "license": "GPLv3 (data: CC0 from abuse.ch)",
+      "homepage": "https://gitlab.com/malware-filter/urlhaus-filter",
+      "trust": 0.9
+    },
+    {
+      "id": "dandelion-antimalware",
+      "name": "DandelionSprout anti-malware hosts",
+      "url": "https://raw.githubusercontent.com/DandelionSprout/adfilt/master/Alternate%20versions%20Anti-Malware%20List/AntiMalwareHosts.txt",
+      "format": "hosts",
+      "category": "malware",
+      "license": "BSD-3-Clause",
+      "homepage": "https://github.com/DandelionSprout/adfilt",
+      "trust": 0.7
+    },
+    {
+      "id": "spam404",
+      "name": "Spam404 main blacklist",
+      "url": "https://raw.githubusercontent.com/Spam404/lists/master/main-blacklist.txt",
+      "format": "domains",
+      "category": "malware",
+      "license": "CC BY-SA 4.0",
+      "homepage": "https://github.com/Spam404/lists",
+      "trust": 0.7
+    },
+    {
+      "id": "phishing-army",
+      "name": "Phishing Army blocklist",
+      "url": "https://phishing.army/download/phishing_army_blocklist_extended.txt",
+      "format": "domains",
+      "category": "malware",
+      "license": "CC BY-NC-SA 4.0",
+      "homepage": "https://phishing.army/",
+      "trust": 0.7
+    },
+    {
+      "id": "easylist-cookie",
+      "name": "EasyList Cookie List",
+      "url": "https://secure.fanboy.co.nz/fanboy-cookiemonster.txt",
+      "format": "adblock",
+      "category": "annoyances",
+      "license": "GPLv3 / CC BY-SA 3.0",
+      "homepage": "https://easylist.to/",
+      "trust": 0.8
+    },
+    {
+      "id": "fanboy-annoyance",
+      "name": "Fanboy Annoyance List",
+      "url": "https://secure.fanboy.co.nz/fanboy-annoyance.txt",
+      "format": "adblock",
+      "category": "annoyances",
+      "license": "GPLv3 / CC BY-SA 3.0",
+      "homepage": "https://easylist.to/",
+      "trust": 0.7,
+      "enabled": false
+    },
+    {
+      "id": "ubo-annoyances",
+      "name": "uBlock Origin — annoyances",
+      "url": "https://ublockorigin.github.io/uAssets/filters/annoyances.txt",
+      "format": "adblock",
+      "category": "annoyances",
+      "license": "GPLv3",
+      "homepage": "https://github.com/uBlockOrigin/uAssets",
+      "trust": 0.8,
+      "enabled": false
+    },
+    {
+      "id": "adguard-annoyances",
+      "name": "AdGuard Annoyances filter",
+      "url": "https://filters.adtidy.org/extension/ublock/filters/14.txt",
+      "format": "adblock",
+      "category": "annoyances",
+      "license": "GPLv3",
+      "homepage": "https://adguard.com/kb/general/ad-filtering/adguard-filters/",
+      "trust": 0.8,
+      "enabled": false
+    },
+    {
+      "id": "adguard-mobile",
+      "name": "AdGuard Mobile Ads filter",
+      "url": "https://filters.adtidy.org/extension/ublock/filters/11.txt",
+      "format": "adblock",
+      "category": "mobile",
+      "license": "GPLv3",
+      "homepage": "https://adguard.com/kb/general/ad-filtering/adguard-filters/",
+      "trust": 0.85
+    },
+    {
+      "id": "adguard-social",
+      "name": "AdGuard Social Media filter",
+      "url": "https://filters.adtidy.org/extension/ublock/filters/4.txt",
+      "format": "adblock",
+      "category": "social",
+      "license": "GPLv3",
+      "homepage": "https://adguard.com/kb/general/ad-filtering/adguard-filters/",
+      "trust": 0.8,
+      "enabled": false
+    },
+    {
+      "id": "easylist-germany",
+      "name": "EasyList Germany",
+      "url": "https://easylist.to/easylistgermany/easylistgermany.txt",
+      "format": "adblock",
+      "category": "ads",
+      "license": "GPLv3 / CC BY-SA 3.0",
+      "homepage": "https://easylist.to/",
+      "trust": 0.9,
+      "enabled": false
+    },
+    {
+      "id": "blocklistproject-malware",
+      "name": "The Blocklist Project — malware",
+      "url": "https://blocklistproject.github.io/Lists/malware.txt",
+      "format": "hosts",
+      "category": "malware",
+      "license": "Unlicense",
+      "homepage": "https://github.com/blocklistproject/Lists",
+      "trust": 0.3,
+      "enabled": false
+    }
+  ]
+}
