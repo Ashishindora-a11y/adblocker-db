@@ -1,6 +1,6 @@
 # adblockker hosts file
 # Entries: 503565
-# Generated: 2026-11-04T08:16:47.601Z
+# Generated: 2026-11-04T10:00:46.116Z
 
 0.0.0.0 marketing.globalpointofcare.abbott
 0.0.0.0 marketing2.globalpointofcare.abbott

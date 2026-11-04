@@ -38,9 +38,15 @@
 /impressions?
 /ad_impression
 /click_tracking/
-/conversion?
 /pixel?adid
 /pagead/1p-user-list
+! "/conversion?" is deliberately absent: it matches unit, currency, and file
+! conversion endpoints on ordinary sites. Only ad-specific spellings are safe
+! as an any-domain rule.
+/adconversion
+/conversion/track
+/track/conversion
+/conversions/track
 
 ! --- Identity / cookie syncing
 /usersync?

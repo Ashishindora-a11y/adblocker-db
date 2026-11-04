@@ -18,6 +18,7 @@ it live in the main project.
 | [`database/blocklist/domains.txt`](https://raw.githubusercontent.com/Ashishindora-a11y/adblocker-db/main/database/blocklist/domains.txt) | The canonical list: one domain per line, each covering its subdomains. |
 | [`database/blocklist/meta.json`](https://raw.githubusercontent.com/Ashishindora-a11y/adblocker-db/main/database/blocklist/meta.json) | Build metadata, per-source counts, and the checksum. |
 | [`database/allowlist.txt`](https://raw.githubusercontent.com/Ashishindora-a11y/adblocker-db/main/database/allowlist.txt) | Domains never blocked (sign-in, payment, CAPTCHA, critical CDNs). |
+| [`database/generic-patterns.txt`](https://raw.githubusercontent.com/Ashishindora-a11y/adblocker-db/main/database/generic-patterns.txt) | URL-path rules that block standard ad-tech endpoints on *any* domain, catching brand-new ad hosts. |
 | [`database/exports/hosts.txt`](https://raw.githubusercontent.com/Ashishindora-a11y/adblocker-db/main/database/exports/hosts.txt) | Same data as a `hosts` file (`0.0.0.0 domain`). |
 | [`database/exports/dnsmasq.conf`](https://raw.githubusercontent.com/Ashishindora-a11y/adblocker-db/main/database/exports/dnsmasq.conf) | Same data as a dnsmasq configuration. |
 | [`database/exports/adblockker.txt`](https://raw.githubusercontent.com/Ashishindora-a11y/adblocker-db/main/database/exports/adblockker.txt) | Same data in Adblock Plus syntax, for uBlock Origin / AdGuard. |
